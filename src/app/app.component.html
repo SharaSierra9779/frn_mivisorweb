@@ -1,0 +1,21 @@
+<h1 >Visor geografico</h1>
+<div id="map"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Estrato</th>
+      <th>Acción</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.direccion }}</td>
+      <td>{{usuario.estrato}}</td>
+      <td><button (click)="localizar(usuario.latitud, usuario.longitud)">Localizar</button></td>
+    </tr>
+  </tbody>
+</table>
